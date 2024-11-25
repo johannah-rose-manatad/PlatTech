@@ -7,7 +7,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #f6a0cb;
+    background-image: url('logo/classy\ pink.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
     color: #333;
 }
 
@@ -25,20 +27,20 @@ body {
 
 /* Logo */
 .signup a img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 20px;
 }
 
 /* Input Fields */
 .signup input {
     width: 80%;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 10px;  /* Adjusted padding to match login form */
+    margin-bottom: 10px;  /* Adjusted margin to match login form */
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    font-size: 16px;
+    font-size: 10px;  /* Adjusted font size to match login form */
     color: #333;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -52,14 +54,14 @@ body {
 
 /* Button */
 .signup button {
-    width: 88%;
-    padding: 15px;
+    width: 40%;  /* Adjusted width to match login button size */
+    padding: 10px;  /* Adjusted padding to match login button */
     background-color: #f6a0cb;
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;  /* Adjusted font size to match login button */
     font-weight: bold;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }

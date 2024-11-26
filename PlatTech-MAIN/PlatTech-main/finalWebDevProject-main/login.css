@@ -1,0 +1,164 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('logo/pink wood.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Login Container */
+.login {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* Logo */
+.login a img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.login input {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login input:focus {
+    border-color: #f6a0cb;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(142, 151, 253, 0.5);
+}
+
+/* Button */
+.login button {
+    width: 86%;
+    padding: 15px;
+    background-color: #f6a0cb;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+    background-color: #e32bac;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sign-Up and Forgot Password Links */
+.login p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login p a {
+    color: #f6a0cb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login p a:hover {
+    color: #e32bac;
+    text-decoration: underline;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+/* Modal content styles */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+/* Forgot password link styling */
+.forgot-password {
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Styles for input field in the reset password popup */
+.modal-content input {
+    width: 97%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content input:focus {
+    border-color: #f6a0cb;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(142, 151, 253, 0.5);
+}
+
+/* Styles for the Submit Button in the modal */
+.modal-content button {
+    width: 50%;
+    padding: 8px;
+    background-color: #f6a0cb;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #e32bac;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

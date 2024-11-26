@@ -2,7 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f6a0cb;
+    background-image: url('logo/classy\ pink.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -15,24 +17,29 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 47px;
     background-color: #fff;
-    padding: 10px 20px;
+    /* background-image: url('logo/Timely Tasks (2)/icon with border big.png'); */
+    background-size: 10px;
+    /* padding: 10px 20px;  */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     z-index: 1000;
 }
 
-.header a img {
-    width: 50px;
-    height: 50px;
+#logolink img {
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
 }
 
 
 /* Profile Link */
 #profileLink img {
-    width: 40px;
-    height: 40px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     border: 2px solid #f6a0cb;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -40,10 +47,10 @@ body {
 
 /* Header Part 2 */
 .headerpt2 {
-    margin-top: 80px;
+    margin-top: 50px;
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: #19020e;
 }
 
 /* Navigation Section */
@@ -55,14 +62,14 @@ body {
 }
 
 .navigate input {
-    width: 150px;
+    width: 100px;
     padding: 10px;
     margin: 5px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #f9f9f9;
-    font-size: 16px;
-    color: #333;
+    font-size: 10px;
+    color: #333333;
 }
 
 .navigate input:focus {
@@ -86,7 +93,7 @@ body {
 
 /* Weekly View */
 .Week {
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #fff;
     border-radius: 15px;
     padding: 20px;
@@ -99,17 +106,17 @@ body {
 }
 
 /* Week Section */
-.week1 {
+/* .week1 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
+} */
 
 .week1 h3 {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: #0b0101;
 }
 
 .week1 img {
@@ -125,8 +132,8 @@ body {
 
 /* Add Task Button */
 #addTaskBtn {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     margin-top: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -137,24 +144,56 @@ body {
 }
 
 /* Task Container */
-#task-container {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    min-height: 100px;
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    color: #666;
-}
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9; /* Light background for better visibility */
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
 
 /* Flexbox Utility for Centering */
-.center-flex {
+/* .center-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+} */
+
+.task {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }
+
+.save-btn {
+    background-color: #f6a0cb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #e689b2;
+}
+
+.task-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+

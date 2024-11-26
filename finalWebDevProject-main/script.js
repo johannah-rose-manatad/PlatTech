@@ -109,51 +109,11 @@ async function addNewTask(text = '', id = null, isSaved = false, status = 'Ongoi
         const taskParagraph = document.createElement('p');
         taskParagraph.classList.add('task');
         taskParagraph.textContent = text;
-
-        // Create the status text
-        const statusText = document.createElement('span');
-        statusText.classList.add('task-status');
-        statusText.textContent = `Task ${status}`;
-        statusText.style.color = status === 'Finished' ? 'green' : 'orange';
-
-        // Apply border to task paragraph
-        taskParagraph.style.border = '2px solid transparent'; // Default border
-
-        // Hover effect for changing task status
-        taskParagraph.onmouseenter = () => {
-            // Change the border color based on the current status
-            taskParagraph.style.borderColor = status === 'Finished' ? 'green' : 'orange';
+        taskParagraph.onclick = () => {
+            taskParagraph.classList.toggle('completed');
+            toggleTaskFinished(taskParagraph, id);
         };
-
-        // Reset the border color when hover ends
-        taskParagraph.onmouseleave = () => {
-            taskParagraph.style.borderColor = '';  // Remove border color
-        };
-
-        // Update task status when clicked (hover to identify the status first)
-        taskParagraph.onclick = async () => {
-            const newStatus = status === 'Finished' ? 'Ongoing' : 'Finished';
-            const newStatusText = newStatus === 'Finished' ? 'Task Finished' : 'Task Ongoing';
-            const newStatusColor = newStatus === 'Finished' ? 'green' : 'orange';
-
-            // Update the status text and color
-            status = newStatus;
-            statusText.textContent = newStatusText;
-            statusText.style.color = newStatusColor;
-
-            // Update the task status in Supabase
-            const { data, error } = await supabase
-                .from('tasks') // Your table name
-                .update({ status: newStatus }) // Update the status
-                .eq('id', id); // Filter by the task ID
-
-            if (error) {
-                console.error('Error updating task status:', error);
-            } else {
-                console.log('Task status updated in Supabase:', data);
-            }
-        };
-
+        
         const removeButton = document.createElement('button');
         removeButton.classList.add('remove-btn');
         removeButton.textContent = 'X';
@@ -161,6 +121,11 @@ async function addNewTask(text = '', id = null, isSaved = false, status = 'Ongoi
             removeTask(id);
         };
 
+        const statusText = document.createElement('span');
+        statusText.classList.add('task-status');
+        statusText.textContent = `Task ${status}`;
+        statusText.style.color = status === 'Finished' ? 'green' : 'orange';
+        
         task.appendChild(removeButton);
         task.appendChild(taskParagraph);
         task.appendChild(statusText);
@@ -169,11 +134,13 @@ async function addNewTask(text = '', id = null, isSaved = false, status = 'Ongoi
             <input type="text" class="task" placeholder="Task" value="${text}">
             <button class="save-btn" onclick="saveTask(this)">Save</button>
         `;
+
+        const taskInput = task.querySelector('.task');
+        taskInput.addEventListener('input', () => {});
     }
 
     taskContainer.appendChild(task);
 }
-
 
 async function saveTask(button) {
     const taskContainer = button.parentNode;
@@ -332,3 +299,29 @@ document.getElementById('profileLink').addEventListener('click', async () => {
     localStorage.removeItem('username');
     window.location.href = 'profileguest.html'; // Redirect to guest profile page after logout
 });
+
+// Function to open the modal
+function openModal() {
+    document.getElementById("forgotPasswordModal").style.display = "block";
+}
+
+// Function to close the modal
+function closeModal(event) {
+    const modal = document.getElementById("forgotPasswordModal");
+    // Check if the click was outside the modal-content
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+// Function to handle email submission (can be customized as needed)
+function submitEmail() {
+    const email = document.getElementById("resetEmail").value;
+    if (email) {
+        alert("Password reset link sent to " + email);
+        closeModal();
+    } else {
+        alert("Please enter a valid email address.");
+    }
+}

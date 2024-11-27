@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timely Tasks</title>
+    <link rel="icon" href="logo/icon wo border big.png" type="image/icon type">
+    <link rel="stylesheet" href="homepage.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.1/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a id="logolink" href="#"><img src="logo/logo with bg big.png" alt="Logo"></a>      
+        <div id="usernameDisplay"></div>                          
+        <a id="profileLink" href="#"><img src="icons used/profile.png" alt="Profile"></a>
+    </div>
+
+    <div class="headerpt2">
+        <p id="Date">January 2024</p>
+    </div>
+
+    <div class="navigate">
+        <!-- Month Dropdown -->
+        <select id="monthInput">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+        <!-- Year Dropdown -->
+        <select id="yearInput">
+            <!-- Add more years as needed -->
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+        </select>
+
+        <img src="icons used/searchblack.png" alt="Go" onclick="goToMonthYear()">
+    </div>
+
+    <!-- Weekly View -->
+    <div class="Week">
+        <div class="week1">
+            <div style="display: flex; align-items: center;">
+                <img src="icons used/leftblack.png" alt="back" id="next1" onclick="back()">
+                <h3 id="Week-label">Week 1</h3>
+                <img src="icons used/rightblack.png" alt="next" id="next2" onclick="next()">
+            </div>
+            <div id="task-container"></div>
+        </div>
+        <img src="icons used/addcircleblack.png" alt="addTask" id="addTaskBtn" onclick="addNewTask()">
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

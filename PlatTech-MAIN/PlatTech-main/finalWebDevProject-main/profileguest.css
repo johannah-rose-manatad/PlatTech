@@ -1,0 +1,92 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('logo/pink wood.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    padding: 5px;
+    background-color: #ffffffa6;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-image: url('logo/logo with bg big.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: 25px;
+    height: 70px; /* Adjust according to your image size */
+}
+
+/* Profile Section */
+.profileGuest {
+    background-color: #ffffffa5;
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    text-align: center;
+    background-image: url('icons used/accountblack.png');
+    background-size: 100px 100px; /* Set the profile image size */
+    background-position: center top 50px;
+    background-repeat: no-repeat;
+    padding-top: 120px; /* Create space for the image */
+}
+
+/* Text Styles */
+#guestuser {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 100px;
+}
+
+.profileGuest a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 10px; /* Spacing between buttons */
+    padding: 12px 40px; /* Button size */
+    border-radius: 15px;
+    background-color: #f6a0cb;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover Effect */
+.profileGuest a:hover {
+    background-color: #f6a0cb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Effect */
+.profileGuest a:active {
+    background-color: #e32bac;
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profileGuest {
+        width: 80%;
+    }
+}
